@@ -21,7 +21,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.6 },
   },
 };
 
@@ -30,7 +30,7 @@ const pathVariants = {
   visible: {
     pathLength: 1,
     opacity: 1,
-    transition: { duration: 2.5, ease: 'easeInOut' },
+    transition: { duration: 2.5 },
   },
 };
 
