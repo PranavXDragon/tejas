@@ -6,10 +6,10 @@ export async function POST(request: NextRequest) {
   try {
     await connectDB();
 
-    const { name, email, message } = await request.json();
+    const { name, email, subject, message } = await request.json();
 
     // Validation
-    if (!name || !email || !message) {
+    if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -27,8 +27,8 @@ export async function POST(request: NextRequest) {
     const contact = await Contact.create({
       name,
       email,
+      subject,
       message,
-      status: 'new',
     });
 
     return NextResponse.json(

@@ -28,6 +28,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: '',
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -48,7 +49,7 @@ export default function Contact() {
       const response = await axios.post('/api/contact', formData);
       setStatus('success');
       setMessage(response.data.message);
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error: any) {
       setStatus('error');
@@ -168,6 +169,21 @@ export default function Contact() {
                   required
                   className="w-full px-4 py-3 rounded-lg border-3 border-purple-500 dark:border-purple-500 bg-gray-800 dark:bg-gray-800 text-white dark:text-white focus:border-purple-400 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all shadow-md shadow-purple-500/20 relative z-10"
                   placeholder="john@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-lg border-3 border-purple-500 dark:border-purple-500 bg-gray-800 dark:bg-gray-800 text-white dark:text-white focus:border-purple-400 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all shadow-md shadow-purple-500/20 relative z-10"
+                  placeholder="What is this about?"
                 />
               </div>
 
