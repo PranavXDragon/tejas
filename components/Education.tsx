@@ -137,7 +137,7 @@ export default function Education() {
               markerEnd="url(#arrowhead)"
               initial={{ strokeDasharray: 1500, strokeDashoffset: 1500, opacity: 0 }}
               whileInView={{ strokeDashoffset: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 2.5, ease: 'easeInOut' }}
+              transition={{ delay: 0.2, duration: 2.5 }}
               viewport={{ once: true }}
             />
             {/* Connection lines from curve to cards */}

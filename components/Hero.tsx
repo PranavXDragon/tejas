@@ -19,7 +19,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.6 },
   },
 };
 
@@ -29,7 +29,7 @@ const imageVariants = {
     opacity: 1,
     scale: 1,
     x: 0,
-    transition: { delay: 3.3, duration: 0.8, ease: 'easeOut' },
+    transition: { delay: 3.3, duration: 0.8 },
   },
 };
 
@@ -50,7 +50,7 @@ export default function Hero() {
       id="home"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay: 3.3, duration: 0.8, ease: 'easeOut' }}
+      transition={{ delay: 3.3, duration: 0.8 }}
       viewport={{ once: true }}
     >
       {/* Image Section */}

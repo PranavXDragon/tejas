@@ -35,7 +35,7 @@ export default function Preloader() {
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          transition={{ duration: 0.8 }}
         >
           {/* Animated Background Orbs */}
           <motion.div
@@ -47,7 +47,6 @@ export default function Preloader() {
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: 'easeInOut',
             }}
           />
           <motion.div
@@ -59,7 +58,6 @@ export default function Preloader() {
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: 'easeInOut',
               delay: 1,
             }}
           />
@@ -71,7 +69,6 @@ export default function Preloader() {
             transition={{
               duration: 2,
               repeat: Infinity,
-              ease: 'easeInOut',
             }}
           >
             {/* Logo with rotation */}
@@ -81,7 +78,6 @@ export default function Preloader() {
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                ease: 'linear',
               }}
             >
               <motion.img
@@ -98,7 +94,6 @@ export default function Preloader() {
                 transition={{
                   duration: 2,
                   repeat: Infinity,
-                  ease: 'easeInOut',
                 }}
               />
               {/* Rotating ring around logo */}
@@ -108,7 +103,6 @@ export default function Preloader() {
                 transition={{
                   duration: 2,
                   repeat: Infinity,
-                  ease: 'linear',
                 }}
                 style={{
                   width: '140px',
@@ -129,7 +123,6 @@ export default function Preloader() {
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                ease: 'easeInOut',
               }}
             >
               <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
@@ -151,7 +144,6 @@ export default function Preloader() {
                   transition={{
                     duration: 1.5,
                     repeat: Infinity,
-                    ease: 'easeInOut',
                     delay: i * 0.2,
                   }}
                 />
@@ -168,7 +160,6 @@ export default function Preloader() {
             }}
             transition={{
               duration: 2,
-              ease: 'easeInOut',
             }}
           />
         </motion.div>
